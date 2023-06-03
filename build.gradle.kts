@@ -20,10 +20,12 @@ repositories {
 }
 
 dependencies {
+    implementation("jakarta.validation:jakarta.validation-api:3.0.0")
     implementation("org.postgresql:postgresql:+")
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.jetbrains:annotations:24.0.0")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     developmentOnly("org.springframework.boot:spring-boot-docker-compose")
