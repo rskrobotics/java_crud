@@ -7,20 +7,34 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
 @Entity
 @Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name="id")
+    private Long id;
+
+    @JsonProperty("firstName")
     @Column
     private String firstName;
+
+    @JsonProperty("lastName")
     @Column
     private String lastName;
+
+    @JsonProperty("age")
     @Column
     private int age;
+
+    @JsonProperty("occupation")
     @Column
     private String occupation;
+
+    // Constructors, getters, and setters
 
     @Override
     public String toString() {
