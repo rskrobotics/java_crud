@@ -1,0 +1,5 @@
+# Show a test of mocking action of adding two users.
+# When to use services, when to use components.
+# Is enable scheduling how it should be? As a decorator in main application?
+# Is the model correctly defined? Why so many decorators? Is there an easier way?
+#Do a builder in user creation api?

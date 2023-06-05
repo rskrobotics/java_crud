@@ -9,16 +9,15 @@ import java.util.concurrent.Executors;
 @Component
 public class ScheduledTaskComponent {
 
-    private ExecutorService executorService;
+    private final ExecutorService executorService;
 
     public ScheduledTaskComponent() {
         executorService = Executors.newFixedThreadPool(5);
     }
 
-    @Scheduled(fixedRate = 1000) // Run every 1 second
+    @Scheduled(fixedRate = 3000)
     public void scheduledTask() {
-        executorService.execute(() -> {
-            System.out.println("Asynchronously ran in the scheduler by: " + Thread.currentThread().getName());
-        });
+        executorService.execute(() ->
+                System.out.println("Asynchronously ran in the scheduler by: " + Thread.currentThread().getName()));
     }
 }
